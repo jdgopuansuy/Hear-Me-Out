@@ -31,10 +31,10 @@
             <a class="nav-link text-light" href="#question-container">QUESTIONS</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#time-capsule">ABOUT</a>
+            <a class="nav-link text-light" href="#features">TIME CAPSULE</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-light" href="#">CONTACT</a>
+            <a class="nav-link text-light" href="#connect-page">CONNECT</a>
           </li>
         </ul>
       </div>
@@ -117,12 +117,13 @@
 
 
   <!-- Features Section-->
-  <section class="p-5 p-lg-6 vh-sm-100 bg-dark d-sm-flex justify-content-center align-items-center" id="time-capsule">
+  <section class="p-lg-5 vh-sm-100 bg-dark d-sm-flex justify-content-center align-items-center" id="features">
     <div class="container">
       <div class="row justify-content-between ">
         <div class="col-md text-center mb-5" id="qoutes-container">
             <h1 class="text-light">Quotes</h1>
-            <p id="quotesDisplay"></p>
+            <br>
+            <p class="fs-2" id="quotesDisplay"></p>
         </div>
         <!--  create and existingtime capsule -->
         <div class="col-md mb-5" id="time-capsule-container-create">
@@ -173,30 +174,32 @@
       </div>
   </section>
   <!-- connect -->
-  <section class=" p-5 vh-sm-100 bg-warning d-sm-flex justify-content-center align-items-center" id="connect-page">
-    <div id="volunteer-container">
-      <div class="align-self-center">
-        <p>Connect with a volunteer</p>
-        <p>Do you need someone to talk to?</p>
-        <p>Or someone who will listen to you?</p>
-        <p>A volunteer civilian will be available to hear you out shortly.</p>
-        <p>Your identity will remain anonymous.</p>
-        <button class="btn btn-md w-25 btn-success"  onclick="enableChatWindow()">Connect</button>
+  <section class=" p-lg-5 vh-sm-100 bg-warning d-sm-flex justify-content-center align-items-center" id="connect-page">
+      <div class="w-100" id="volunteer-container">
+          <p>Connect with a volunteer</p>
+          <p>Do you need someone to talk to?</p>
+          <p>Or someone who will listen to you?</p>
+          <p>A volunteer civilian will be available to hear you out shortly.</p>
+          <p>Your identity will remain anonymous.</p>
+          <button class="btn btn-md  btn-success"  onclick="enableChatWindow()">Connect</button>
       </div>
-
-    </div>
-    <!-- chat when enabled -->
-    <div id="chat-window">
-      <div id="chatContainerUser"></div>
-      <input type="text" id="inputChatUser">
-      <button onclick="sendMessageFunctionUser()">send</button>
-    </div>
-    <div id="professional-container">
-      <p>Connect with a professional</p>
-      <p>Would you prefer a professional to help you further?</p>
-      <p>If you wish to proceed, we may need to gather personal information as we find a professional near you.</p>
-      <button class="btn btn-md w-25 btn-success">Connect</button>
-    </div>
+      <!-- chat when enabled -->
+      <div class="w-100" id="chat-window">
+        <div id="chatContainerUser"></div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="inputChatUser" >
+          <button class="btn btn-success" onclick="sendMessageFunctionUser()" type="button">Send</button>
+        </div>
+        
+        <!-- <input  class="form-control" type="text" id="inputChatUser">
+        <button class="btn btn-md  btn-success"  onclick="sendMessageFunctionUser()">send</button> -->
+      </div>
+      <div class="w-100" id="professional-container">
+        <p>Connect with a professional</p>
+        <p>Would you prefer a professional to help you further?</p>
+        <p>If you wish to proceed, we may need to gather personal information as we find a professional near you.</p>
+        <button class="btn btn-md btn-success">Connect</button>
+      </div>
   </section>
 
   <!-- Footer Section -->
