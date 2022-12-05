@@ -121,22 +121,18 @@ body {
 /* Features Section */
 /* Features Section */
 #features {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #000000;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+  position: relative;
+  padding-top: 130px !important;
 }
 /* Quotes of the day */
  #qoutes-container  {
     margin:5px;
     padding: 30px;
     border-radius: 15px;
-    height: 80vh;
+    height: 76vh;
     background-color: #F79824;
     /* flex-direction: column; */
+    
 }
 
 
@@ -145,6 +141,7 @@ body {
     margin: 5px;
     padding: 30px;
     border-radius: 15px;
+    height: 76vh;
     background-color: #33A1FD;
 }
 
@@ -154,6 +151,7 @@ body {
     border-radius: 15px;
     background-color: #33A1FD;
     display: none;
+    height: 76vh;
 }
 
 /* Connect Section */
@@ -161,6 +159,8 @@ body {
 #connect-page {
     padding: 10px;;
     background-color: antiquewhite;
+    position: relative;
+    padding-top: 130px !important;
 }
 
 #connect-page #volunteer-container {
@@ -172,6 +172,10 @@ body {
     background-color: #f5f0cf;
     color: rgb(126, 122, 122);
     text-align: center;
+    /* margin:5px; */
+    padding: 30px;
+    border-radius: 15px;
+    /* height: 70vh; */
 
 }
 #connect-page #professional-container {
@@ -183,6 +187,10 @@ body {
     background-color: #606060;
     color: white;
     text-align: center;
+    /* margin:5px; */
+    padding: 30px;
+    border-radius: 15px;
+    /* height: 70vh; */
  
 }
 /* Footer Section */
