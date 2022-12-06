@@ -167,8 +167,10 @@
             <!-- Form send button -->
             <div class="d-grid d-flex flex-row-reverse gap-2">
               <!-- <button class="btn btn-success btn-lg" type="button" id="timeCapsuleStoreBtn">Store</button> -->
+
               <button class="btn btn-md btn-danger" type="button">Cancel</button>
               <button class="btn btn-md btn-success" type="button" id="timeCapsuleStoreBtn">Store</button>
+
             </div>
           </form>
         </div>
@@ -187,7 +189,8 @@
       <button class="btn btn-md  btn-success" onclick="enableChatWindow()">Connect</button>
     </div>
     <!-- chat when enabled -->
-    <div class="w-100" id="chat-window">
+    <div class="w-100" id="chat-window" style="position: relative;">
+      <i class="fa-solid fa-xmark" onclick="closeChatWindow()" style="color: white; position: absolute; top: 0px; right: 6px;"></i>
       <div id="chatContainerUser"></div>
       <div class="input-group mb-3">
         <input type="text" class="form-control" id="inputChatUser">
