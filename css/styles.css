@@ -81,6 +81,7 @@ body {
     color: white;
     position: relative;
     padding-top: 100px !important;
+  
 
 }
 
@@ -129,8 +130,9 @@ body {
     margin:5px;
     padding: 30px;
     border-radius: 15px;
-    height: 76vh;
+    height: 75vh;
     background-color: #F79824;
+    overflow: hidden;
     /* flex-direction: column; */
     
 }
@@ -141,7 +143,7 @@ body {
     margin: 5px;
     padding: 30px;
     border-radius: 15px;
-    height: 76vh;
+    height: 75vh;
     background-color: #33A1FD;
 }
 
@@ -150,8 +152,9 @@ body {
     padding: 30px;
     border-radius: 15px;
     background-color: #33A1FD;
+    height: 100%;
     display: none;
-    height: 76vh;
+    
 }
 
 /* Connect Section */
@@ -195,5 +198,3 @@ body {
 }
 /* Footer Section */
 /* Footer Section */
-
-

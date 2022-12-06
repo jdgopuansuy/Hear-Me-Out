@@ -173,4 +173,6 @@ function quotesList() {
 }
 function display() {
     quotesDisplay.innerHTML = quote[JSON.parse(localStorage.getItem("quotes"))];
+    
+
 }
