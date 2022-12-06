@@ -48,8 +48,15 @@
           <span class="lead fs-4 fw-bold mt-0">You Share, We Listen, You Heal.</span>
           <h1 class="hero-title text-lg-start text-center">YOU ARE NOT ALONE!</h1>
           <p class="lead fs-3 text-lg-start text-center">
+            <br>
             You dont have to keep everything to yourself,
-            we are here to hear you out. We can be an ear that listens to your story, and that is what "Hear Me Out" is all about.
+            <br>
+            we are here to hear you to hear you out.
+            <br>
+            We can be an ear that listens to your story,
+            <br>
+            and that is what "Hear Me Out" is
+            all about.
           </p>
           <button class="btn btn-primary btn-md w-50 text-center">
             <span>Get Started</span>
@@ -118,17 +125,17 @@
     <div class="container">
       <div class="row justify-content-between ">
         <div class="col-md text-center mb-5" id="qoutes-container">
-            <h1 class="text-light">Quotes</h1>
-            <br>
+          <h1 class="text-light">Quotes</h1>
+          <div>
             <p class="fs-4" id="quotesDisplay"></p>
+          </div>
+          <div></div>
         </div>
         <!--  create and existingtime capsule -->
         <div class="col-md mb-5" id="time-capsule-container-create">
           <h1 class="text-center text-light">Time Capsule</h1>
           <p class="text-light">You can create time capsule to store and open it at a set date.</p>
           <button onclick="createTCfunction()" class="btn btn-md  btn-warning">Create</button>
-          <br />
-          <br />
           <div id="existineCapsuteContainer">
           </div>
 
@@ -169,31 +176,94 @@
   </section>
   <!-- connect -->
   <section class=" p-lg-5 vh-sm-100 bg-warning d-sm-flex justify-content-center align-items-center" id="connect-page">
-      <div class="w-100" id="volunteer-container">
-          <p>Connect with a volunteer</p>
-          <p>Do you need someone to talk to?</p>
-          <p>Or someone who will listen to you?</p>
-          <p>A volunteer civilian will be available to hear you out shortly.</p>
-          <p>Your identity will remain anonymous.</p>
-          <button class="btn btn-md  btn-success"  onclick="enableChatWindow()">Connect</button>
+    <div class="w-100" id="volunteer-container">
+      <h2>Connect with a volunteer</h2>
+      <div>
+        <p>Do you need someone to talk to?</p>
+        <p>Or someone who will listen to you?</p>
+        <p>A volunteer civilian will be available to hear you out shortly.</p>
+        <p>Your identity will remain anonymous.</p>
       </div>
-      <!-- chat when enabled -->
-      <div class="w-100" id="chat-window">
-        <div id="chatContainerUser"></div>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" id="inputChatUser" >
-          <button class="btn btn-success" onclick="sendMessageFunctionUser()" type="button">Send</button>
-        </div>
-        
-        <!-- <input  class="form-control" type="text" id="inputChatUser">
+      <button class="btn btn-md  btn-success" onclick="enableChatWindow()">Connect</button>
+    </div>
+    <!-- chat when enabled -->
+    <div class="w-100" id="chat-window">
+      <div id="chatContainerUser"></div>
+      <div class="input-group mb-3">
+        <input type="text" class="form-control" id="inputChatUser">
+        <button class="btn btn-success" onclick="sendMessageFunctionUser()" type="button">Send</button>
+      </div>
+
+      <!-- <input  class="form-control" type="text" id="inputChatUser">
         <button class="btn btn-md  btn-success"  onclick="sendMessageFunctionUser()">send</button> -->
-      </div>
-      <div class="w-100" id="professional-container">
-        <p>Connect with a professional</p>
+    </div>
+    <div id="professional-container">
+      <h2>Connect with a professional</h2>
+      <div>
         <p>Would you prefer a professional to help you further?</p>
-        <p>If you wish to proceed, we may need to gather personal information as we find a professional near you.</p>
-        <button class="btn btn-md btn-success">Connect</button>
+        <p>If you wish to proceed, we may need to gather personal information as we find a practitioner.
+        </p>
       </div>
+      <button class="btn btn-md btn-success" onclick="openPopupForm()">Proceed</button>
+      <!-- -----------------POPUP-FORM-------------------->
+      <div class="popup-form" id="popup-form">
+        <form action="#" method="#">
+          <img src="img/id-card.png">
+          <i class="fa-solid fa-xmark" onclick="closePopupForm()"></i>
+          <h3>Information Form</h3>
+          <div class="popup-form-input">
+            <label for="firstname">First Name:</label>
+            <input type="text" class="form-control" placeholder="First Name" id="firstname">
+            <label for="lastname">Last Name:</label>
+            <input type="text" class="form-control" placeholder="Last Name" id="lastname">
+            <label for="birthday">Date of Birth:</label>
+            <input type="date" class="form-control" name="birthday" id="birthday">
+            <label for="email">Email Address:</label>
+            <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" class="form-control" name="mobile" id="mobile" placeholder="Mobile Number">
+            <div class="contactmethod">
+              <label for="contactmethod">Preferred method of contact:</label>
+              <div class="d-flex justify-content-around">
+                <label for="emailmethod"><input type="radio" class="form-check-input" name="contactmethod" id="emailmethod">Email</label>
+                <label for="phonemethod"><input type="radio" class="form-check-input" name="contactmethod" id="phonemethod">Phone</label>
+              </div>
+            </div>
+          </div>
+          <div class="availability">
+            <div class="day">
+              <label for="day">Which day is best for you?</label>
+              <br>
+              <select name="day" id="day" class="form-select">
+                <option selected disabled>Choose a day</option>
+                <option value="monday">Monday</option>
+                <option value="tuesday">Tuesday</option>
+                <option value="wednesday">Wednesday</option>
+                <option value="thursday">Thursday</option>
+                <option value="friday">Friday</option>
+                <option value="saturday">Saturday</option>
+              </select>
+            </div>
+            <div class="time">
+              <label for="time">When is the best time?</label>
+              <br>
+              <select name="time" id="time" class="form-select">
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn btn-md btn-success" type="button" onclick="continueForm()">Continue</button>
+        </form>
+      </div>
+      <div class="popup-msg" id="popup-msg">
+        <img src="img/404-tick.png">
+        <h2>Inquiry sent!</h2>
+        <p>Please expect an email or a phone call 24 hours before your prefered day and time this week.</p>
+        <button class="btn btn-md btn-success" onclick="closePopup()">OK</button>
+      </div>
+    </div>
   </section>
 
   <!-- Footer Section -->
