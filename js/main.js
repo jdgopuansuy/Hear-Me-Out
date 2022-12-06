@@ -173,6 +173,22 @@ function quotesList() {
 }
 function display() {
     quotesDisplay.innerHTML = quote[JSON.parse(localStorage.getItem("quotes"))];
-    
 
+}
+//----------------------------------PopUp Form----------------------------//
+let popup = document.querySelector("#popup-form");
+let popupmsg = document.querySelector("#popup-msg");
+
+function openPopupForm() {
+    popup.classList.add("open-popup-form");
+}
+function closePopupForm() {
+    popup.classList.remove("open-popup-form");
+}
+function continueForm() {
+    popup.classList.remove("open-popup-form");
+    popupmsg.classList.add("open-popup-msg");
+}
+function closePopup() {
+    popupmsg.classList.remove("open-popup-msg");
 }
