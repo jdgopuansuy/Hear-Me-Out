@@ -135,7 +135,7 @@
         <div class="col-md mb-5" id="time-capsule-container-create">
           <h1 class="text-center text-light">Time Capsule</h1>
           <p class="text-light">You can create time capsule to store and open it at a set date.</p>
-          <button onclick="createTCfunction()" class="btn btn-md  btn-warning mb-4">Create</button>
+          <button onclick="createTCfunction()" class="btn btn-md  btn-warning">Create</button>
           <div id="existineCapsuteContainer">
           </div>
 
@@ -167,10 +167,8 @@
             <!-- Form send button -->
             <div class="d-grid d-flex flex-row-reverse gap-2">
               <!-- <button class="btn btn-success btn-lg" type="button" id="timeCapsuleStoreBtn">Store</button> -->
-
-              <button class="btn btn-md btn-danger" type="button">Cancel</button>
-              <button class="btn btn-md btn-success" type="button" id="timeCapsuleStoreBtn">Store</button>
-
+              <button class="btn btn-md w-25 btn-danger" type="button">Cancel</button>
+              <button class="btn btn-md w-25 btn-success" type="button" id="timeCapsuleStoreBtn">Store</button>
             </div>
           </form>
         </div>
@@ -189,8 +187,7 @@
       <button class="btn btn-md  btn-success" onclick="enableChatWindow()">Connect</button>
     </div>
     <!-- chat when enabled -->
-    <div class="w-100" id="chat-window" style="position: relative;">
-      <i class="fa-solid fa-xmark" onclick="closeChatWindow()" style="color: white; position: absolute; top: 0px; right: 6px;"></i>
+    <div class="w-100" id="chat-window">
       <div id="chatContainerUser"></div>
       <div class="input-group mb-3">
         <input type="text" class="form-control" id="inputChatUser">
