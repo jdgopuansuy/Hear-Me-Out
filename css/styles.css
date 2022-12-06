@@ -63,7 +63,7 @@ body {
     width: 100px;
 }
 
-.road-image {
+#hero-container .road-image {
     position: absolute;
     /* max-width: 1100px; */
     left: 0;
