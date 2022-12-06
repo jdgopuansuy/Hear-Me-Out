@@ -1,10 +1,9 @@
 //=================================chat===========================================//
-//declare elements
-let volunteerContainer = document.querySelector("#volunteer-container");
-let chatWindow = document.querySelector("#chat-window");
 ///////enabled chat window
 function enableChatWindow() {
+    let volunteerContainer = document.querySelector("#volunteer-container");
     volunteerContainer.style.display = "none";
+    let chatWindow = document.querySelector("#chat-window");
     chatWindow.style.display = "block"
 }
 ///////end of enabled chat window
@@ -31,7 +30,6 @@ function displayMessages() {
         let createSpan = document.createElement('span')
         let createPDate = document.createElement('p')
         chatContainerUser.appendChild(createDiv)
-        chatContainerUser.insertBefore(createDiv, chatContainerUser.firstChild)
         createDiv.appendChild(createA)
         createDiv.appendChild(createSpan)
         createDiv.appendChild(createPDate)
@@ -44,10 +42,6 @@ function displayMessages() {
         createPDate.textContent = parsedChat[i].Date
     }
 
-}
-function closeChatWindow() {
-    volunteerContainer.style.display = "block";
-    chatWindow.style.display = "none"
 }
 //=========================end of chat=================================//
 
@@ -62,8 +56,6 @@ const existineCapsuteContainer = document.querySelector("#existineCapsuteContain
 const enteredDate = document.querySelector("#date");
 const timeCapsuleStoreBtn = document.querySelector("#timeCapsuleStoreBtn");
 timeCapsuleStoreBtn.addEventListener("click", storeFunction);
-const cancel = document.querySelector("#cancel");
-cancel.addEventListener('click', cancelFunction)
 //create elements
 let createTCStoredDiv = document.createElement('Div')
 let createOpenButtn = document.createElement('button');
@@ -129,11 +121,6 @@ function storeFunction() {
 function createTCfunction() {
     TCcontainer.style.display = "block";
     TCcontainerCreate.style.display = "none";
-}
-
-function cancelFunction() {
-    TCcontainer.style.display = "none";
-    TCcontainerCreate.style.display = "block";
 }
 
 //------------------------------Quotes of the Day-------------------------//
